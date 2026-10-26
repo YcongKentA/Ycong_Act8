@@ -351,3 +351,59 @@ a:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 5px;
 }
+
+/* Highlighted Potential navigation link */
+.nav-links a.potential-link {
+    display: inline-block;
+    padding: 7px 12px;
+    border: 1px solid #657d68;
+    border-radius: 4px;
+    color: #4e6552;
+    font-weight: bold;
+    background-color: #f3f6f1;
+}
+
+.nav-links a.potential-link:hover,
+.nav-links a.potential-link.active {
+    background-color: #657d68;
+    border-color: #657d68;
+    color: #ffffff;
+}
+
+/* Potential page headline */
+.potential-page {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.potential-page h1 {
+    max-width: 1000px;
+    font-size: clamp(42px, 8vw, 88px);
+    line-height: 1.1;
+    letter-spacing: -2px;
+    color: #262626;
+}
+
+.potential-page h1 span {
+    color: #657d68;
+}
+
+/* Mobile navigation */
+@media (max-width: 700px) {
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a.potential-link {
+        padding: 6px 9px;
+    }
+
+    .potential-page h1 {
+        letter-spacing: -1px;
+    }
+}
