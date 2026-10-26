@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom T-Shirt Design | My Portfolio</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .live-button {
+            display: inline-block;
+            margin: 15px 0;
+            padding: 12px 20px;
+            background-color: #222;
+            color: #fff;
+            border: 1px solid #222;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+        }
+
+        .live-button:hover {
+            background-color: #444;
+        }
+
+        .project-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-images img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="../index.html" class="logo">portfolio.</a>
+
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../projects.html">Projects</a></li>
+                <li><a href="../skills.html">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <p class="eyebrow">PROJECT / 02</p>
+            <h1>Custom T-Shirt Design</h1>
+
+            <p class="section-description">
+                A collection of custom apparel designs created for
+                sublimation printing.
+            </p>
+        </section>
+
+        <section class="section">
+            <article class="skill-card">
+                <h2>About the Project</h2>
+                <p>
+                    This project showcases my custom T-shirt design
+                    work. The designs demonstrate my interest in
+                    apparel design and sublimation printing.
+                </p>
+
+                <h2>Tools Used</h2>
+                <p>Adobe Photoshop and Adobe Illustrator.</p>
+
+                <h2>Design Gallery</h2>
+
+                <div class="project-images">
+                    <img src="SubP/Sub1.png" alt="Custom T-shirt design 1">
+                    <img src="SubP/Sub2.png" alt="Custom T-shirt design 2">
+                    <img src="SubP/Sub3.png" alt="Custom T-shirt design 3">
+                </div>
+
+                <a href="../projects.html" class="live-button">
+                    &larr; Back to Projects
+                </a>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

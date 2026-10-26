@@ -1,0 +1,353 @@
+/* 1. Reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background: #fafaf8;
+    --surface: #ffffff;
+    --text: #262626;
+    --muted: #737373;
+    --border: #b8b8b0;
+    --accent: #657d68;
+    --accent-hover: #4e6552;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* 2. Navigation bar */
+.header {
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 22px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent);
+}
+
+/* 3. Home section */
+.hero {
+    max-width: 1100px;
+    min-height: 570px;
+    margin: 0 auto;
+    padding: 120px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--background);
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    max-width: 750px;
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.12;
+    letter-spacing: -2.5px;
+    margin-bottom: 24px;
+    color: var(--text);
+}
+
+.hero-description {
+    max-width: 580px;
+    color: var(--muted);
+    margin-bottom: 30px;
+}
+
+/* 4. General buttons */
+.button {
+    display: inline-block;
+    background-color: var(--accent);
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 22px;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+.button:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: #ffffff;
+}
+
+/* 5. General sections */
+.section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 85px 30px;
+    border-top: 1px solid var(--border);
+}
+
+.section h1,
+.section h2 {
+    font-size: 36px;
+    line-height: 1.25;
+    letter-spacing: -1px;
+    margin-bottom: 22px;
+    color: var(--text);
+}
+
+.section-description {
+    max-width: 700px;
+    color: var(--muted);
+}
+
+/* 6. Skills and projects grid */
+.skills-grid,
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 35px;
+}
+
+/* Skill cards */
+.skill-card {
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background-color: var(--surface);
+    transition: transform 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+/* Project cards */
+.project-card {
+    height: 100%;
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background-color: var(--surface);
+    transition: transform 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+/* Card headings and descriptions */
+.skill-card h3,
+.project-card h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.skill-card p,
+.project-card > p:not(.project-number) {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* Project number */
+.project-number {
+    color: var(--accent);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+}
+
+/* 7. Skill tags */
+.skill-card .tag {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 22px;
+    margin-right: 8px;
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background-color: var(--surface);
+    color: var(--text);
+    font-size: 12px;
+}
+
+/* 8. View Project button */
+.project-action,
+.skill-card a.project-action,
+.skill-card a.project-link {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 22px;
+    padding: 12px 20px;
+    background-color: var(--accent);
+    color: #ffffff !important;
+    border: 1px solid var(--accent);
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.7;
+    text-decoration: none !important;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+/* Remove any arrow added by CSS */
+.project-action::after,
+.project-link::after {
+    content: none !important;
+}
+
+/* Button hover effect */
+.project-action:hover,
+.skill-card a.project-action:hover,
+.skill-card a.project-link:hover {
+    background-color: var(--accent-hover);
+    border-color: var(--accent-hover);
+    color: #ffffff !important;
+    text-decoration: none !important;
+    transform: translateY(-2px);
+}
+
+/* 9. Contact and social media links */
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.contact-links a {
+    display: inline-block;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background-color: var(--surface);
+    transition: border-color 0.2s ease,
+                color 0.2s ease;
+}
+
+.contact-links a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* 10. Footer */
+.footer {
+    background-color: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 25px 30px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* 11. Tablet and mobile screens */
+@media (max-width: 700px) {
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-links {
+        gap: 10px;
+    }
+}
+
+/* 12. Keyboard accessibility */
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 5px;
+}
+
+/* 13. Project links */
+.project-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.project-link .project-card {
+    height: 100%;
+}
+
+.project-link:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 5px;
+}
